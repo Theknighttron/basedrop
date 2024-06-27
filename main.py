@@ -18,8 +18,9 @@ def playAudio():
 def stopAudio(length):
     global count
     if count == length:
-        response = input("Do you want to repeat the song? Yes or No")
-        if response == "Yes":
+        response = input("Do you want to repeat the song? Yes or No: ")
+        count = 0
+        if response.lower() == "yes":
             playAudio()
         else:
             print("Quitting basedrop application")
